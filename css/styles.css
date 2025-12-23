@@ -14,57 +14,215 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Cormorant Garamond", "Source Serif 4", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
   display: grid;
   place-items: center;
+  padding: 20px 0;
 }
 
-main { width: min(760px, 92vw); }
+main { 
+  width: min(760px, 92vw); 
+  max-width: 100%;
+}
 
 .card {
   background: var(--card);
-  padding: 28px;
+  padding: 32px 28px;
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .hidden { display: none; }
 
-.lead { margin-top: 0; font-size: 1.1rem; }
-.hint { color: var(--muted); font-size: .95rem; }
+.lead { 
+  margin-top: 0; 
+  font-size: 1.15rem; 
+  line-height: 1.6;
+}
+.hint { 
+  color: var(--muted); 
+  font-size: .95rem; 
+  display: block;
+  margin-bottom: 8px;
+}
 .input {
   width: 100%;
-  margin: 12px 0 16px;
-  padding: 12px 14px;
+  margin: 0 0 18px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: white;
   color: var(--text);
+  font-size: 16px;
+  touch-action: manipulation;
+}
+.input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 .btn {
   background: var(--accent);
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 14px 24px;
   border-radius: 12px;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  touch-action: manipulation;
+  transition: background .2s ease;
 }
+.btn:hover { background: #b57460; }
+.btn:active { background: #a66755; }
 .btn:disabled { opacity: .6; cursor: not-allowed; }
-.msg { color: #b65742; min-height: 1.2em; }
+.msg { 
+  color: #b65742; 
+  min-height: 1.4em;
+  margin-top: 12px;
+  font-size: .95rem;
+}
 
-h1 { margin: 0 0 8px; font-weight: 600; }
-h2 { margin: 18px 0 8px; font-weight: 600; }
+h1 { 
+  margin: 0 0 12px; 
+  font-weight: 600; 
+  font-size: 2rem;
+  line-height: 1.2;
+}
+h2 { 
+  margin: 28px 0 12px; 
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+h2:first-of-type { margin-top: 0; }
 
-.list { padding-left: 18px; }
-.list li { margin: 6px 0; }
+section { margin-bottom: 32px; }
+section:last-of-type { margin-bottom: 0; }
+section p { margin: 8px 0 16px; }
+
+.list { 
+  padding-left: 22px;
+  margin: 12px 0;
+}
+.list li { 
+  margin: 10px 0;
+  line-height: 1.6;
+}
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
 }
-.gallery figure { margin: 0; background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.gallery img { display: block; width: 100%; height: auto; }
-.gallery figcaption { padding: 10px 12px; color: var(--muted); font-size: .95rem; }
+.gallery figure { 
+  margin: 0; 
+  background: white; 
+  border: 1px solid var(--border); 
+  border-radius: 12px; 
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.gallery figure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.gallery img { 
+  display: block; 
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+}
+.gallery figcaption { 
+  padding: 12px 14px; 
+  color: var(--muted); 
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+footer small {
+  color: var(--muted);
+  font-size: .9rem;
+}
 
 .fade { animation: fade .4s ease; }
-@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fade { 
+  from { opacity: 0; transform: translateY(6px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  
+  main {
+    width: 94vw;
+  }
+  
+  .card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.35rem;
+    margin: 24px 0 10px;
+  }
+  
+  section {
+    margin-bottom: 28px;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .list {
+    padding-left: 18px;
+  }
+  
+  .btn {
+    padding: 16px 24px;
+    font-size: 1.05rem;
+  }
+  
+  .input {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .card {
+    padding: 20px 16px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+}
