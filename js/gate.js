@@ -80,4 +80,93 @@ document.addEventListener("click", function(){
   if(code){ tryUnlock(code); }
 })();
 
+// Adventure book page turns with cover and flip animation
+(function(){
+  const pages = [
+    { type: "cover", cover: "assets/images/cover.jpg", title: "Our Adventure Book", subtitle: "(Inspired by UP)" },
+    { photo: "assets/images/photo1.jpg", date: "01 Jan 2024", text: "asdasd" },
+    { photo: "assets/images/photo2.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy." },
+    { photo: "assets/images/photo3.jpg", date: "12 Jan 2024", text: "asdasdasd" }
+  ];
+
+  let index = 0; // current page index (cover is 0)
+  const pageLeft = document.getElementById("pageLeft");
+  const pageRight = document.getElementById("pageRight");
+  const indicatorEl = document.getElementById("pageIndicator");
+  const prevBtn = document.getElementById("prevPage");
+  const nextBtn = document.getElementById("nextPage");
+  const spread = document.getElementById("spread");
+  const viewport = document.getElementById("bookViewport");
+
+  if(!pageLeft || !pageRight || !indicatorEl || !prevBtn || !nextBtn || !spread || !viewport) return;
+
+  function renderPagePair(page){
+    // Cover page: left blank, right cover
+    if(page.type === "cover"){
+      pageLeft.innerHTML = "";
+      pageLeft.classList.remove("cover");
+      pageRight.classList.add("cover");
+      pageRight.innerHTML = `
+        <div class="cover-img" style="background-image:url('${page.cover}')"></div>
+        <div class="cover-title">${page.title || ""}</div>
+        <div class="cover-sub">${page.subtitle || ""}</div>
+      `;
+      return;
+    }
+
+    // Normal page: left = photo/date, right = text
+    pageLeft.classList.remove("cover");
+    pageRight.classList.remove("cover");
+
+    pageLeft.innerHTML = `
+      <div class="photo-frame">
+        <img src="${page.photo}" alt="Memory photo" />
+      </div>
+      <div class="photo-date">${page.date || ""}</div>
+    `;
+
+    pageRight.innerHTML = `
+      <div class="page-doodles">✿ ✦ ✿</div>
+      <div class="page-text">${page.text || ""}</div>
+    `;
+  }
+
+  function render(){
+    const current = pages[index];
+    renderPagePair(current);
+    indicatorEl.textContent = (index + 1) + " / " + pages.length;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === pages.length - 1;
+  }
+
+  function turn(direction){
+    const nextIndex = index + direction;
+    if(nextIndex < 0 || nextIndex > pages.length - 1) return;
+    index = nextIndex;
+    spread.classList.remove("flip-left", "flip-right");
+    void spread.offsetWidth;
+    spread.classList.add(direction > 0 ? "flip-right" : "flip-left");
+    render();
+  }
+
+  prevBtn.addEventListener("click", function(){ turn(-1); });
+  nextBtn.addEventListener("click", function(){ turn(1); });
+
+  // Touch swipe for mobile
+  let startX = null;
+  viewport.addEventListener("touchstart", function(e){
+    if(!e.touches || !e.touches.length) return;
+    startX = e.touches[0].clientX;
+  });
+  viewport.addEventListener("touchend", function(e){
+    if(startX === null) return;
+    const dx = (e.changedTouches && e.changedTouches[0].clientX) - startX;
+    startX = null;
+    if(Math.abs(dx) < 40) return;
+    if(dx < 0) turn(1); else turn(-1);
+  });
+
+  render();
+})();
+
 
