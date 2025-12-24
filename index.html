@@ -31,23 +31,39 @@
         <h1>For You</h1>
       </header>
 
-      <section>
-        <h2>Home:You</h2>
-        <p>This space exists because you matter to me. I needed a place to slow down and say what my heart means, not what my mouth failed to.</p>
+      <section class="letter-section" id="home">
+        <h2>Home</h2>
+        <div class="notepad">
+          <div class="notepad-heading">A calm, sincere letter</div>
+          <p>This space exists because you matter to me. I needed a place to slow down and say what my heart means, not what my mouth failed to.</p>
+        </div>
       </section>
 
-      <section>
-        <h2>US</h2>
-        <ul class="list">
-          <li>The day I realized I trust you — [1–2 lines]</li>
-          <li>When you supported me without asking anything back — [1–2 lines]</li>
-          <li>A moment I didn’t say thank you loudly enough — [1–2 lines]</li>
-        </ul>
+      <section class="book-section" id="adventure-book">
+        <div class="book-header">
+          <h2>Our Adventure Book</h2>
+          <div class="book-controls">
+            <button class="book-btn" id="prevPage" aria-label="Previous page">‹</button>
+            <span id="pageIndicator">1 / 1</span>
+            <button class="book-btn" id="nextPage" aria-label="Next page">›</button>
+          </div>
+        </div>
+        <div class="book-viewport" id="bookViewport">
+          <div class="spread" id="spread">
+            <div class="page left" id="pageLeft"></div>
+            <div class="page right" id="pageRight"></div>
+          </div>
+        </div>
+        <div class="book-hint">Swipe or tap arrows to turn pages</div>
       </section>
 
-      <section>
-        <h2>Why do I love you</h2>
-        <p>Yasdasdasdas</p>
+      <section class="letter-section floral" id="special-you">
+        <h2>What Is So Special About You</h2>
+        <div class="notepad floral-paper">
+          <div class="floral-doodle">❀ ❁ ❀</div>
+          <div class="notepad-heading">Why I like you</div>
+          <p>Short, specific reasons that feel true to you.</p>
+        </div>
       </section>
 
       <section>
@@ -64,19 +80,10 @@
         <p>You don’t have to forgive me quickly. I’m here, learning, and I will be better with your heart.</p>
       </section>
 
-      <section>
-        <h2>Gallery</h2>
-        <div class="gallery">
-          <figure>
-            <img src="assets/images/photo1.jpg" alt="A memory we share" />
-            <figcaption>“This was the day I realized how much you matter.”</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/gifs/moment1.gif" alt="A warm moment" />
-            <figcaption>“I never want to be careless with your heart again.”</figcaption>
-          </figure>
-        </div>
-      </section>
+      <div class="cat-wrap">
+        <div class="cat">🐈</div>
+        <div class="cat-shadow"></div>
+      </div>
 
       <footer>
         <small>Made with care, for you.</small>
