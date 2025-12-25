@@ -85,7 +85,7 @@ document.addEventListener("click", function(){
   const pages = [
     { type: "cover", cover: "assets/images/cover.jpg", title: "Our Adventure Book", subtitle: "(Inspired by UP)" },
     { photo: "assets/images/photo1.jpg", date: "01 Jan 2024", text: "asdasd" },
-    { photo: "assets/images/photo2.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy." },
+    { photo: "assets/images/photo2.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
     { photo: "assets/images/photo3.jpg", date: "12 Jan 2024", text: "asdasdasd" }
   ];
 
@@ -101,7 +101,7 @@ document.addEventListener("click", function(){
   if(!pageLeft || !pageRight || !indicatorEl || !prevBtn || !nextBtn || !spread || !viewport) return;
 
   function renderPagePair(page){
-    // Cover page: left blank, right cover (book closed)
+    // Cover page: left blank, right cover (book closed) - image only, no text
     if(page.type === "cover"){
       pageLeft.innerHTML = "";
       pageLeft.classList.remove("cover");
@@ -110,8 +110,6 @@ document.addEventListener("click", function(){
       pageRight.style.visibility = "visible";
       pageRight.innerHTML = `
         <div class="cover-img" style="background-image:url('${page.cover}')"></div>
-        <div class="cover-title">${page.title || ""}</div>
-        <div class="cover-sub">${page.subtitle || ""}</div>
       `;
       return;
     }

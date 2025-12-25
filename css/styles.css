@@ -331,7 +331,7 @@ section p { margin: 8px 0 16px; }
   background: #fdfbf7;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 14px;
+  padding: 7px;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02), 0 6px 12px rgba(0,0,0,0.03);
   height: 430px;
   position: relative;
@@ -359,18 +359,33 @@ section p { margin: 8px 0 16px; }
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .photo-date {
-  margin-top: 10px;
-  font-size: 0.95rem;
+  margin-top: 4px;
+  font-size: 0.80rem;
   color: var(--muted);
+  text-align: right;
 }
 .page-doodles {
   color: var(--accent);
-  margin-bottom: 8px;
 }
 .page-text {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text);
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 8px;
+  /* padding-bottom: 16px; */
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+.page-text::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.page-text {
+  scrollbar-width: none;
 }
 
 .cover {
@@ -512,13 +527,18 @@ footer small {
     padding-left: 18px;
   }
   
+  .book-section {
+    padding: 8px;
+  }
+
   .book-viewport {
     margin-top: 10px;
+    transform: scale(1);
+    transform-origin: top center;
   }
   .spread {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    transform: scale(0.94);
-    transform-origin: top center;
+    gap: 10px;
   }
   .page {
     height: 207px;
@@ -527,8 +547,46 @@ footer small {
     height: 207px;
   }
   .book-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .book-controls {
+    gap: 6px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .book-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
+
+  .page-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 8px;
+    /* padding-bottom: 16px; */
+    box-sizing: border-box;
+  }
+
+  .book-hint {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  /* Hide scrollbar for webkit on mobile */
+  .page-text::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-text {
+    scrollbar-width: none;
   }
 
   .btn {
