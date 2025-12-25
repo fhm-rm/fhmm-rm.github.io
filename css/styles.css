@@ -1,5 +1,5 @@
 :root {
-  --bg: #FAFAF8;
+  --bg: #e2f1f8;
   --card: #FFFFFF;
   --text: #5A5A5A;
   --accent: #F5C5D3;
@@ -13,7 +13,7 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  background: linear-gradient(135deg, var(--bg) 0%, #F0F0EC 100%);
+  background: var(--bg);
   color: var(--text);
   font-family: "Cormorant Garamond", "Source Serif 4", Georgia, serif;
   font-size: 18px;
@@ -108,7 +108,7 @@ h2 {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.3;
-  color: var(--accent-warm);
+  color: #8f9779;
   position: relative;
   padding-left: 20px;
 }
@@ -168,10 +168,10 @@ section p { margin: 8px 0 16px; }
 
 /* Letter / notepad styles */
 .letter-section .notepad {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: #FFF5F8;
+  border: 1px solid #F0D0DD;
   border-radius: 14px;
-  padding: 20px 18px 22px;
+  padding: 18px 18px 22px;
   box-shadow: 0 10px 24px var(--glow);
   position: relative;
   overflow: hidden;
@@ -182,44 +182,66 @@ section p { margin: 8px 0 16px; }
   inset: 0;
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(149, 167, 151, 0.15) 0,
-    rgba(149, 167, 151, 0.15) 1px,
+    rgba(232, 180, 200, 0.45) 0,
+    rgba(232, 180, 200, 0.45) 1px,
     transparent 1px,
-    transparent 32px
+    transparent 30px
   );
   pointer-events: none;
 }
 .notepad-heading {
   font-weight: 600;
-  margin: 0 0 10px;
+  margin: 12px 0 0;
+  padding: 0;
   color: var(--text);
+  line-height: 30px;
 }
 .letter-section p {
   position: relative;
   z-index: 1;
+  line-height: 30px;
+  margin: 0;
 }
 
-/* Floral pink paper */
-.floral-paper {
-  background: linear-gradient(180deg, #fdf0f4 0%, #fff7fa 100%);
-  border-color: #f3d1dd;
+/* Floral paper (pastel yellow with brown lines & doodles) */
+.letter-section .notepad.floral-paper {
+  background: linear-gradient(180deg, #FFF8D8 0%, #FFFDF2 100%);
+  border-color: #e9dfb7;
+  position: relative;
 }
-.floral-paper:before {
+.letter-section .notepad.floral-paper:before {
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(245, 197, 211, 0.35) 0,
-    rgba(245, 197, 211, 0.35) 1px,
+    rgba(139, 94, 60, 0.40) 0,
+    rgba(139, 94, 60, 0.40) 1px,
     transparent 1px,
     transparent 30px
   );
 }
-.floral-doodle {
+.floral-paper {
+  background: linear-gradient(180deg, #FFF8D8 0%, #FFFDF2 100%);
+  border-color: #e9dfb7;
   position: relative;
+}
+.floral-doodle {
+  position: absolute;
+  right: 12px;
+  top: 8px;
   z-index: 1;
-  color: #e295b5;
-  text-align: center;
-  margin-bottom: 6px;
-  font-size: 1.1rem;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  /* Hide any emoji text; SVG will render via :before */
+  color: transparent;
+  font-size: 0;
+}
+.floral-doodle:before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url('../assets/images/cat.svg') center/contain no-repeat;
 }
 
 /* Book / scrapbook */
@@ -290,7 +312,7 @@ section p { margin: 8px 0 16px; }
   border-radius: 14px;
   padding: 14px;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.02), 0 6px 12px rgba(0,0,0,0.03);
-  min-height: 260px;
+  height: 430px;
   position: relative;
   overflow: hidden;
 }
@@ -340,6 +362,9 @@ section p { margin: 8px 0 16px; }
   text-align: center;
   color: #5a3d26;
   font-weight: 600;
+  height: 430px;
+  padding: 14px;
+  border-radius: 14px;
 }
 .cover-img {
   width: 100%; height: 100%; background-size: cover; background-position: center;
@@ -474,7 +499,7 @@ footer small {
     transform-origin: top center;
   }
   .page {
-    min-height: 220px;
+    min-height: 207px;
   }
   .book-header {
     flex-direction: column;

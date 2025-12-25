@@ -101,11 +101,13 @@ document.addEventListener("click", function(){
   if(!pageLeft || !pageRight || !indicatorEl || !prevBtn || !nextBtn || !spread || !viewport) return;
 
   function renderPagePair(page){
-    // Cover page: left blank, right cover
+    // Cover page: left blank, right cover (book closed)
     if(page.type === "cover"){
       pageLeft.innerHTML = "";
       pageLeft.classList.remove("cover");
+      pageLeft.style.visibility = "hidden";
       pageRight.classList.add("cover");
+      pageRight.style.visibility = "visible";
       pageRight.innerHTML = `
         <div class="cover-img" style="background-image:url('${page.cover}')"></div>
         <div class="cover-title">${page.title || ""}</div>
@@ -114,9 +116,11 @@ document.addEventListener("click", function(){
       return;
     }
 
-    // Normal page: left = photo/date, right = text
+    // Normal page: left = photo/date, right = text (book open)
     pageLeft.classList.remove("cover");
     pageRight.classList.remove("cover");
+    pageLeft.style.visibility = "visible";
+    pageRight.style.visibility = "visible";
 
     pageLeft.innerHTML = `
       <div class="photo-frame">
