@@ -409,8 +409,9 @@ section p { margin: 8px 0 16px; }
   gap: 6px;
 }
 .cat {
-  font-size: 2.4rem;
-  color: #f59e0b;
+  width: 150px;
+  height: 150px;
+  display: block;
   animation: cat-bob 2.6s ease-in-out infinite;
 }
 .cat-shadow {
