@@ -226,7 +226,7 @@ section p { margin: 8px 0 16px; }
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url('../assets/images/shortcake.svg') center/contain no-repeat;
+  background: url('../assets/svg/shortcake.svg') center/contain no-repeat;
 }
 
 /* Floral paper (pastel yellow with brown lines & doodles) */
@@ -267,7 +267,7 @@ section p { margin: 8px 0 16px; }
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url('../assets/images/cat.svg') center/contain no-repeat;
+  background: url('../assets/svg/cat.svg') center/contain no-repeat;
 }
 
 /* Book / scrapbook */

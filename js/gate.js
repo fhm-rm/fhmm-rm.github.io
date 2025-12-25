@@ -3,6 +3,40 @@ const audio = document.getElementById("bgAudio");
 const toggle = document.getElementById("audioToggle");
 const AUDIO_STATE = "audio-muted";
 
+// Day counter from July 27, 2023 4 PM
+function updateDayCount(){
+  const startDate = new Date(2023, 6, 27, 16, 0, 0); // July 27, 2023 4 PM
+  const now = new Date();
+  const diff = now - startDate;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1; // +1 to include day 1
+  const dayCountEl = document.getElementById("dayCount");
+  if(dayCountEl) {
+    dayCountEl.textContent = days;
+  }
+}
+
+// Update on page load
+updateDayCount();
+
+// Schedule update every day at 4 PM
+function scheduleNextUpdate(){
+  const now = new Date();
+  const next4PM = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 16, 0, 0);
+  
+  // If 4 PM has already passed today, schedule for tomorrow
+  if(now > next4PM){
+    next4PM.setDate(next4PM.getDate() + 1);
+  }
+  
+  const timeUntilNext = next4PM - now;
+  setTimeout(function(){
+    updateDayCount();
+    scheduleNextUpdate();
+  }, timeUntilNext);
+}
+
+scheduleNextUpdate();
+
 // Restore mute state from localStorage on load
 const isMuted = localStorage.getItem(AUDIO_STATE) === "true";
 if(isMuted) {
@@ -84,13 +118,23 @@ document.addEventListener("click", function(){
 (function(){
   const pages = [
     { type: "cover", cover: "assets/images/cover.jpg", title: "Our Adventure Book", subtitle: "(Inspired by UP)" },
-    { photo: "assets/images/photo1.jpg", date: "01 Jan 2024", text: "asdasd" },
-    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
-    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
-    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
-    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
-    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
-    { photo: "assets/images/photo3.jpg", date: "12 Jan 2024", text: "asdasdasd" }
+    { photo: "assets/images/27JUL2023.jpg", date: "27 Jul 2023", text: "We met the first time on this day. It was raining earlier but the time we met there was no rain. We went to Glazed to have donuts and later coffee from 'Cafelystic'. I had to feed you xD hehe. I dropped you in Banasree and you gave me a hug. That changed everything. It felt like the picture. You felt like the picture." },
+    { photo: "assets/images/1AUG2023.jpg", date: "1 Aug 2023", text: "This was the first time ever I came to the Uni inbetween my office to met you. I dropped you till Hatirjheel. The first time I held your hands. We dont have a picture but welp" },
+    { photo: "assets/images/15AUG2023.jpg", date: "15 Aug 2023", text: "Our First Date! I asked you out on a date on 27 July, after a few days you said Yes *-*. What happened in the lift still gives me goosebumps till this day. It was kind of the start of the journey for me..." },
+    { photo: "assets/images/20AUG2023.jpg", date: "20 Aug 2023", text: "Another date to Cafelystic. Became our favourite place. Probably the first time I saw you in Salwar Kamiz. I lost it totally. You looked so beautiful in that satin dress <3 My all time favourite outfit of yours" },
+    { photo: "assets/images/24AUG2023.jpg", date: "24 Aug 2023", text: "First Chillox Date!!!!!! *-*, I did your nails that day. Very amateurly yes but it was fun." },
+    { photo: "assets/images/31AUG2023.jpg", date: "31 Aug 2023 ", text: "First BFC Date. I remember this day very well in my memory ^-^ We went to a different BFC but there was no seating arrangement so in the end we ended up going Dhanmondi 19. This is one of my favourite picture of ours. You said 'Husbando' seeing this :3" },
+    { photo: "assets/images/14SEP2023.jpg", date: "14 Sep 2023", text: "It was one of those calm soothing long date. We went to chillox first, then we went to Cafelystic. from 10 AM to 4.30AM we were together" },
+    { photo: "assets/images/21SEP2023.jpg", date: "21 Sep 2023", text: "2 Calicos. Do you remember this day? It was raining. We strolled through Dhanmondi Lake. Befriended some cats. Went to Cafelystic (again), We even went to Moms and Kids shop *-*" },
+    { photo: "assets/images/28SEP2023.jpg", date: "28 Sep 2023", text: "Cat Cafe Dateeeeeeeeeeeeeeeeeeeeeeeee.🐱 I cherish this day very fondly. Took a lot of pictures with you. You seemed genuinly happy that day seeing cats. I was too seeing you. You looked v v v v v v v v hot that day " },
+    { photo: "assets/images/9OCT2023.jpg", date: "9 Oct 2023", text: "A Short Khanas de tour from Univeristy <3" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/", date: "", text: "" },
   ];
 
   let index = 0; // current page index (cover is 0)
