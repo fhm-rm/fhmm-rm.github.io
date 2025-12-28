@@ -85,7 +85,7 @@ document.addEventListener("click", function(){
   const btn = document.getElementById("enter");
   const msg = document.getElementById("msg");
 
-  const PASSWORD = "yournickname"; // TODO: set to the private nickname
+  const PASSWORD = "sillybird"; // TODO: set to the private nickname
   const KEY = "access-granted";
 
   function unlock(){
