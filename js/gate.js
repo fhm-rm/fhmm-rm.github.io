@@ -129,28 +129,28 @@ document.addEventListener("click", function(){
     { photo: "assets/images/28SEP2023.jpg", date: "28 Sep 2023", text: "Cat Cafe Dateeeeeeeeeeeeeeeeeeeeeeeee.🐱 I cherish this day very fondly. Took a lot of pictures with you. You seemed genuinly happy that day seeing cats. I was too seeing you. You looked v v v v v v v v hot that day " },
     { photo: "assets/images/9OCT2023.jpg", date: "9 Oct 2023", text: "A Short Khanas de tour from Univeristy <3" },
     { photo: "assets/images/10OCT2023.jpg", date: "10 Oct 2023", text: "So racist ^-^" },
-    { photo: "assets/images/12OCT2023.jpg", date: "12 Oct 2023", text: "" },
-    { photo: "assets/images/12.1OCT2023.jpg", date: "12 Oct 2023", text: "" },
-    { photo: "assets/images/18OCT2023.jpg", date: "18 Oct 2023", text: "" },
-    { photo: "assets/images/19OCT2023.jpg", date: "19 Oct 2023", text: "" },
-    { photo: "assets/images/30OCT2023.jpg", date: "30 Oct 2023", text: "" },
-    { photo: "assets/images/3NOV2023.jpg", date: "3 Nov 2023", text: "" },
-    { photo: "assets/images/10NOV2023.jpg", date: "10 Nov 2023", text: "" },
-    { photo: "assets/images/17NOV2023.jpg", date: "17 Nov 2023", text: "" },
-    { photo: "assets/images/24NOV2023.jpg", date: "24 Nov 2023", text: "" },
-    { photo: "assets/images/16DEC2023.jpg", date: "16 Dec 2023", text: "" },
-    { photo: "assets/images/25DEC2023.jpg", date: "25 Dec 2023", text: "" },
-    { photo: "assets/images/27DEC2023.jpg", date: "27 Dec 2023", text: "" },
-    { photo: "assets/images/31DEC2023.jpg", date: "31 Dec 2023", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
-    { photo: "assets/images/", date: "", text: "" },
+    { photo: "assets/images/12OCT2023.jpg", date: "12 Oct 2023", text: "it was raining that day. For the first time you sat on my lap and I hugged you all in cafelystic :3 Very fond of this memory" },
+    { photo: "assets/images/12.1OCT2023.jpg", date: "12 Oct 2023", text: "Mine 💖 I am willing to do everything to make you mine, My Precious" },
+    { photo: "assets/images/18OCT2023.jpg", date: "18 Oct 2023", text: "2 Eepy Cats in a lazy after noon" },
+    { photo: "assets/images/19OCT2023.jpg", date: "19 Oct 2023", text: "Waifuuuuuuuuuuuuuuuuuuuuuuuuuuu. Ma Sha Allah <3" },
+    { photo: "assets/images/30OCT2023.jpg", date: "30 Oct 2023", text: "Yum Cha 🍜 Date!. One of the perfect date ever. You my Silly Goose🦢 you looked so good that day. So eleganto and classy. We went to emerald after that for coffee. Good Memory *-*" },
+    { photo: "assets/images/3NOV2023.jpg", date: "3 Nov 2023", text: "'I've got my mind on you \n I got my mind on you \n Say yes to Heaven \n Say yes to me \n Say yes to Heaven \n Say yes to me \n I've got my eye on you \n I've got my eye on you, mm' \n Flancos, On this day. We were having coffee. Singing along, You were singing. I just loved seeing you" },
+    { photo: "assets/images/10NOV2023.jpg", date: "10 Nov 2023", text: "On Winters Eve. It just started to get a bit chilly. We were holding onto each other in Madchef. I gave you some origami dinosaurs that day. It was a post called 'Someone teach me how to make origami dinosaurs so that I can impress her' " },
+    { photo: "assets/images/17NOV2023.jpg", date: "17 Nov 2023", text: "Borgir in Chillox and Lucky Strike in Smoking Zone xD" },
+    { photo: "assets/images/24NOV2023.jpg", date: "24 Nov 2023", text: "Had pasta for the first time together in Alfresco, Lets not talk about why I am wearing lipstick like a twink" },
+    { photo: "assets/images/16DEC2023.jpg", date: "16 Dec 2023", text: "Cafe Mango Date. YOU LOOOOOOOOOOOKED SOOOOOOOOOO FIREEEEE 🔥🔥🔥 that day ON GOD. Had to call fireservice on my mind \n My fit was ass :3 It didnt match the vibe. You gave me gifts that day. My December 3 Sweater ^_^" },
+    { photo: "assets/images/25DEC2023.jpg", date: "25 Dec 2023", text: "First Christmas Together🔔 \n You looked so elegantly beautiful that day :') Heart melted. We went to bookworm and got ourselves some books. Our first NorthEnd Coffee and Cinnamon roll together. It wasnt a perfect Christmas. I remember this cause I promised I will take you to more festive places next time." },
+    { photo: "assets/images/27DEC2023.jpg", date: "27 Dec 2023", text: " I love you so much in this outfittttttt \n You loook soooooooo cuteeee 😭😭😭 \n OMG my heart. I melt. You look so happy. Went Cafelystic afterwards" },
+    { photo: "assets/images/31DEC2023.jpg", date: "31 Dec 2023", text: "Year End Meeeeeeeeeeeet \n Fit wasnt fitting properly that day, Pinewood was shit \n Still we had a lot of adda over coffee and you gave me a cute notepad. We planed how we want our next year to be. Wrote it down. Wrote on each others notebook being honest partners. Good times. Happy New Year Babe. I love you. " },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
+    // { photo: "assets/images/", date: "", text: "" },
   ];
 
   let index = 0; // current page index (cover is 0)
@@ -193,7 +193,7 @@ document.addEventListener("click", function(){
 
     pageRight.innerHTML = `
       <div class="page-doodles">✿ ✦ ✿</div>
-      <div class="page-text">${page.text || ""}</div>
+      <div class="page-text">${(page.text || "").replace(/\n/g, '<br>')}</div>
     `;
   }
 
