@@ -45,6 +45,9 @@ if(isMuted) {
   toggle.textContent = "🔇";
 }
 
+// Reduce volume by 30% (set to 70%)
+audio.volume = 0.5;
+
 function playAudio(){
   // Browser autoplay policy: play only if user has interacted with page
   const playPromise = audio.play();
