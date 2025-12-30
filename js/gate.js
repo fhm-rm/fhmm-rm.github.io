@@ -85,7 +85,11 @@ document.addEventListener("click", function(){
   const pages = [
     { type: "cover", cover: "assets/images/cover.jpg", title: "Our Adventure Book", subtitle: "(Inspired by UP)" },
     { photo: "assets/images/photo1.jpg", date: "01 Jan 2024", text: "asdasd" },
-    { photo: "assets/images/photo2.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
+    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
+    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
+    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
+    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
+    { photo: "assets/images/photo1.jpg", date: "11 Jan 2024", text: "Write-up abasdadasdy Write-up abasdadasdy. Write-up abasdadasdy. Write-up abasdadasdy. Write-up  as4das64das64." },
     { photo: "assets/images/photo3.jpg", date: "12 Jan 2024", text: "asdasdasd" }
   ];
 

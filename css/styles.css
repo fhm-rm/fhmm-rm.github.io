@@ -8,6 +8,10 @@
   --border: #E8E8E8;
   --glow: rgba(245, 197, 211, 0.15);
 }
+.page.left {
+  display: flex;
+  flex-direction: column;
+}
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -111,6 +115,7 @@ h2 {
   color: #8f9779;
   position: relative;
   padding-left: 20px;
+  white-space: nowrap;
 }
 h2:before {
   content: "✦";
@@ -356,13 +361,16 @@ section p { margin: 8px 0 16px; }
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1 1 auto;
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .photo-date {
   margin-top: 4px;
-  font-size: 0.80rem;
+  font-size: 0.95rem;
   color: var(--muted);
   text-align: right;
+  flex-shrink: 0;
+  font-weight: 800;
 }
 .page-doodles {
   color: var(--accent);
@@ -510,8 +518,9 @@ footer small {
   }
   
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin: 24px 0 10px;
+    white-space: nowrap;
   }
   
   section {
@@ -541,10 +550,10 @@ footer small {
     gap: 10px;
   }
   .page {
-    height: 207px;
+    height: 220px;
   }
   .cover {
-    height: 207px;
+    height: 220px;
   }
   .book-header {
     flex-direction: row;
@@ -578,6 +587,22 @@ footer small {
     margin-top: 8px;
     font-size: 0.8rem;
     text-align: left;
+  }
+
+  /* Keep photo + date visible on small screens */
+  .page.left {
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-frame {
+    flex: 1 1 auto;
+    max-height: 88%;
+  }
+  .photo-date {
+    margin-top: 6px;
+    font-size: 0.80rem;
+    font-weight: 500;
+    flex-shrink: 0;
   }
 
   /* Hide scrollbar for webkit on mobile */
