@@ -97,6 +97,57 @@ main {
   font-size: .95rem;
 }
 
+/* Gate / Password page styling */
+.gate-card {
+  max-width: 420px;
+  text-align: center;
+  padding: 48px 32px;
+  position: relative;
+  margin-top: 60px;
+}
+
+.gate-header {
+  margin-bottom: 32px;
+}
+
+.bongo-cat {
+  width: 120px;
+  height: 120px;
+  display: block;
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+@keyframes bongo-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-12px); }
+}
+
+.gate-flourish {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+  letter-spacing: 8px;
+}
+
+.gate-title {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #8f9779;
+  line-height: 1.2;
+}
+
+.gate-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
 h1 { 
   margin: 0 0 12px; 
   font-weight: 600; 
@@ -382,7 +433,7 @@ section p { margin: 8px 0 16px; }
   overflow-y: auto;
   max-height: 100%;
   padding-right: 8px;
-  /* padding-bottom: 16px; */
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -464,7 +515,7 @@ footer small {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: linear-gradient(135deg, var(--accent) 0%, #F0A9C3 100%);
+  background: linear-gradient(135deg, #E8C5D5 0%, #F0D5E3 100%);
   border: none;
   width: 48px;
   height: 48px;
@@ -474,7 +525,8 @@ footer small {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  box-shadow: 0 4px 12px var(--glow);
+  color: #8f9779;
+  box-shadow: 0 4px 12px rgba(245, 197, 211, 0.1);
   transition: transform .2s ease, box-shadow .2s ease;
   z-index: 100;
   touch-action: manipulation;
@@ -579,7 +631,7 @@ footer small {
     overflow-y: auto;
     max-height: 100%;
     padding-right: 8px;
-    /* padding-bottom: 16px; */
+    padding-bottom: 20px;
     box-sizing: border-box;
   }
 
