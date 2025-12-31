@@ -97,6 +97,39 @@ main {
   font-size: .95rem;
 }
 
+/* New Year card */
+.newyear-card {
+  background: #bf0415;
+  color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px var(--glow);
+  margin-bottom: 24px;
+  padding: 28px 18px 32px;
+  text-align: center;
+}
+.newyear-image {
+  width: min(80%, 420px);
+  aspect-ratio: 4 / 3;
+  background: url('../assets/images/newyear.jpg') center/cover no-repeat;
+  margin: 0 auto 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.newyear-message {
+  padding: 0 12px 6px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Source Serif 4", "Cormorant Garamond", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.newyear-message p {
+  margin: 0;
+}
+
 /* Gate / Password page styling */
 .gate-card {
   max-width: 420px;
